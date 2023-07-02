@@ -5,90 +5,97 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-.borde {
-  border: 1px solid #ccc;
+.borde{
+    border: 1px solid #ccc;
 }
-body {
-  background: #eee;
+.container{
+    height: 100vh;    
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;    
+    display: flex;
+    flex-flow: column nowrap;    
 }
-.container {
-  height: 100vh;
-  max-width: 1280px;
-  width: 95%;
-  margin: auto;
-  display: flex;
-  flex-flow: column nowrap;
+nav, main, section, footer, div{    
+    display: flex;
+    flex-flow: row nowrap;    
 }
-nav {
-  position: fixed;
-  max-width: 1280px;
-  width: 95%;
-  margin: auto;
-  display: flex;
-  flex-flow: row nowrap;
-  height: 50px;
+nav{
+    position: fixed;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    height: 50px;
 }
-nav div {
-  flex: 1;
-  display: flex;
-  flex-flow: row nowrap;
+nav a{
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
 }
-nav a {
-  flex: 1;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  padding: 0 5px;
+.logo{
+    flex: 20%;
+    justify-content: center;
+    background: #fff;
 }
-.logo {
-  flex: 20%;
-  background: #fff;
-  justify-content: center;  
+.logo img{    
+    height: 50px;
+    padding: 5px;
 }
-.logo img {
-  height: 50px;
-  padding: 5px;
+.navegacion{
+    flex: 65%;    
+    justify-content: flex-start;
+    background: #aaa;
 }
-.navega {
-  flex: 65%;
+.navegacion .inicio{
+    flex: 1;
+    background: #666;
 }
-.navega .inicio {
-  flex: 1;  
-  background: #999;
+.navegacion .navega{
+    flex: 10;
+    justify-content: flex-end;    
 }
-.navega .navegacion {  
-  flex: 1;  
-  justify-content: flex-end;
-  background: #666;
+.navegacion .navega a{
+    flex: 0;
+    background: #666;
 }
-.navega .inicio a:hover,
-.navega .navegacion a:hover {
-  background: #000;
+.navegacion .inicio a:hover,
+.navegacion .navega a:hover{
+    background: #000;
 }
-.ingreso {
-  flex: 15%;
-  background: #333;
-  color: #fff;
+.ingreso{
+    flex: 15%;    
+    background: #333;
 }
-.ingreso a:hover {
-  background: #000;
+.ingreso a{
+    color: #fff;
 }
-section {
-  height: 92vh;
-  padding: 60px 10px 10px 10px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  background: #000;
+.ingreso a:hover{
+    background: #000;
+}
+main{    
+    height: 92vh;
+    flex-flow: column nowrap;
+    padding: 50px 0 0 0;
+    background: #eee;    
+}
+section{    
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background: #000;
 }
 section div {
   flex: 1;
   display: flex;
   flex-flow: row nowrap;
-  padding: 5px;
+  padding: 2.5px;
 }
 section .card {
   display: flex;
@@ -111,75 +118,13 @@ section a {
 section a:hover {
   background: #ddd;
 }
-footer {
-  height: 8vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  background: #333;
-  color: #fff;
-  font-size: 0.7em;
-}
-
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-  }
-  nav {
-    width: 100%;
+footer{
+    height: 8vh;
     flex-flow: column nowrap;
-    height: 150px;
-  }
-  nav div {
-    flex: 1;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .logo {
-    flex: 2;
+    justify-content: center;
     align-items: center;
-  }
-  .logo img {
-    padding: 0;
-  }
-  .navega {
-    flex: 1;
-  }
-  .navega .inicio {
-    flex: 30%;
-  }
-  .navega .navegacion {
-    flex: 70%;
-    justify-content: flex-end;
-    background: #666;
-  }
-  .navega .navegacion a {
-    flex: 1;
-  }
-  .ingreso {
-    flex: 1;
-    background: #333;
+    padding: 20px;    
+    background: #222;
     color: #fff;
-  }
-  section {
-    flex: 1;
-    padding: 160px 5px 5px 5px;
-  }
-  section div {
-    flex: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 0;
-  }
-  section div > div {
-    padding: 5px;
-  }
-  section .card {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-  footer {
-    font-size: 0.6em;
-  }
+    font-size: 0.8em;
 }
